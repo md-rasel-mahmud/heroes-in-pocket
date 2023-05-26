@@ -70,8 +70,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="flex items-center gap-2 uppercase text-xl">
-          <img className="h-10 rounded-lg" src={logo} alt="Logo" /> Goriber
-          Heros
+          <img className="h-10 rounded-lg" src={logo} alt="Logo" /> Heroes in pocket
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
