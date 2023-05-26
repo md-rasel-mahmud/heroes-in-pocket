@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <img className="w-32" src={logo} alt="log" />
           <p>
-            GORIBER HEROS LTD.
+            Heroes in pocket LTD.
             <br />
             Our mission to provide Heros on your Pocket
           </p>
@@ -51,7 +51,7 @@ const Footer = () => {
       </footer>
       <div  className="footer footer-center p-4 bg-black/10 backdrop-blur-md text-base-content my-3 rounded-lg ">
         <div>
-          <p>Copyright © 2023 - All right reserved by GORIBER HEROS LTD.</p>
+          <p>Copyright © 2023 - All right reserved by Heroes in pocket LTD.</p>
         </div>
       </div>
     </>
