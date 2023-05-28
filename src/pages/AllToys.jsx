@@ -227,10 +227,10 @@ const AllToys = () => {
             </div>
           </div>
           <div className="divider"></div>
-          <div className="card card-side bg-base-200 shadow-xl">
-            <figure>
+          <div className="card card-side flex-col lg:flex-row bg-base-200 shadow-xl">
+            <figure className="p-4 lg:p-0">
               {viewDetail?.picture && (
-                <img src={viewDetail?.picture} alt="Toy Image" />
+                <img src={viewDetail?.picture} className="rounded" alt="Toy Image" />
               )}
             </figure>
             <div className="card-body">
