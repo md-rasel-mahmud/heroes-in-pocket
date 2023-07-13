@@ -6,7 +6,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import Toast from "../../SAToast";
 
-const ToyTab = ({setViewDetail}) => {
+const ToyTab = ({ setViewDetail }) => {
   const [loader, setLoader] = useState(false);
   const [categoryName, setCategoryName] = useState([]);
   const [toyByCategory, setToyByCategory] = useState([]);
@@ -16,7 +16,7 @@ const ToyTab = ({setViewDetail}) => {
   const serverUrl = "https://assignment-11-toy-marketplace-server.vercel.app";
   const localhostUrl = "http://localhost:5000";
 
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
 
   // fetch tab items
   useEffect(() => {
@@ -46,25 +46,24 @@ const ToyTab = ({setViewDetail}) => {
     setTabNameState(toyName);
   };
 
-  const navigate = useNavigate()
-  // click view detail button to check user 
-  const handleViewDetails  = (toyInfo) => {
+  const navigate = useNavigate();
+  // click view detail button to check user
+  const handleViewDetails = (toyInfo) => {
     if (user) {
-      setViewDetail(toyInfo)
-      return
+      setViewDetail(toyInfo);
+      return;
     } else {
       Toast.fire({
-      icon: 'error',
-      title: 'You have to log in first to view details'
-
-      })
-      navigate('/login')
+        icon: "error",
+        title: "You have to log in first to view details",
+      });
+      navigate("/login");
     }
-  }
+  };
 
   return (
     <>
-      <div  className="tabs bg-black/10 backdrop-blur-lg rounded-lg justify-center py-3 mt-5 ">
+      <div className="tabs bg-black/10 backdrop-blur-lg rounded-lg justify-center py-3 mt-5 ">
         <button
           onClick={() => setTabNameState("all-toys")}
           className={`tab tab-bordered capitalize ${
@@ -92,7 +91,7 @@ const ToyTab = ({setViewDetail}) => {
         <Spinner />
       ) : (
         <>
-          <div  className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {toyByCategory
               .slice(0, seeMore ? toyByCategory.length : 6)
               .map((toy) => (
@@ -117,15 +116,25 @@ const ToyTab = ({setViewDetail}) => {
                       <label
                         htmlFor="my-modal-5"
                         className="btn btn-secondary rounded-full btn-sm"
-                        // receive setViewDetail useState function and send data from setViewDetail function 
+                        // receive setViewDetail useState function and send data from setViewDetail function
                         onClick={() => handleViewDetails(toy)}
                       >
                         view details
                       </label>
                     </div>
                   </div>
-                  <figure>
-                    {toy?.picture && <img src={toy?.picture} alt="Shoes" />}
+                  <figure className="h-44 md:h-72 border border-t-4 border-primary">
+                    {
+                      <img
+                        className="object-cover object-top w-full h-full"
+                        src={
+                          toy?.picture
+                            ? toy?.picture
+                            : "https://thumbs.dreamstime.com/b/action-figures-toys-line-icon-vector-illustration-sign-isolated-contour-symbol-black-225878361.jpg"
+                        }
+                        alt="Toys"
+                      />
+                    }
                   </figure>
                 </div>
               ))}
@@ -139,8 +148,6 @@ const ToyTab = ({setViewDetail}) => {
           }
         </>
       )}
-
-
     </>
   );
 };

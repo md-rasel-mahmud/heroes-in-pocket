@@ -8,6 +8,7 @@ import About from "../components/HomeSection/About";
 import OurTeam from "../components/HomeSection/OurTeam";
 import { Helmet } from "react-helmet";
 import Faq from "../components/HomeSection/Faq";
+import BestToys from "../components/HomeSection/BestToys";
 
 const Home = () => {
   const [viewDetail, setViewDetail] = useState("");
@@ -18,7 +19,13 @@ const Home = () => {
       <Helmet>
         <title>Heroes in pocket</title>
       </Helmet>
+      {/* Banner section  */}
       <Banner />
+
+
+      {/* Best toys section  */}
+
+      <BestToys></BestToys>
 
       {/* ShopByCategory section  */}
 

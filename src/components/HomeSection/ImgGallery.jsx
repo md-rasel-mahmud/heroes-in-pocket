@@ -33,8 +33,8 @@ const ImgGallery = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 p-5 rounded-lg">
         {toyImg.slice(4, 10).map((img) => (
           <div data-aos="zoom-out" key={img._id} className="h-fit group overflow-hidden rounded-lg">
-            <div className="relative rounded-lg">
-              <img className=" w-full object-cover" src={img.picture} alt="" />
+            <div className="relative rounded-lg h-44 md:h-72">
+              <img className=" object-cover object-top w-full h-full" src={img.picture} alt="" />
               <div className="absolute h-full w-full bg-black/25  flex items-end justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <p className="text-primary text-center font-bold py-4 bg-white/60 drop-shadow-sm backdrop-blur-sm h-fit w-full">
                   {img.name}{" "}
