@@ -27,7 +27,7 @@ const ImgGallery = () => {
 
   return (
     <div className="bg-black/10 backdrop-blur-md rounded-lg">
-      <h2 data-aos="zoom-in-down" className="text-3xl text-center py-5 mt-3 ">IMAGE GALLERY</h2>
+      <h2 data-aos="zoom-in-down" className="text-3xl text-center text-secondary font-bold py-5 mt-3 ">IMAGE GALLERY</h2>
       {loader && <Spinner />}
       <div className="divider"></div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 p-5 rounded-lg">

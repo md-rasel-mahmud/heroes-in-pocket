@@ -7,6 +7,7 @@ import ImgGallery from "../components/HomeSection/ImgGallery";
 import About from "../components/HomeSection/About";
 import OurTeam from "../components/HomeSection/OurTeam";
 import { Helmet } from "react-helmet";
+import Faq from "../components/HomeSection/Faq";
 
 const Home = () => {
   const [viewDetail, setViewDetail] = useState("");
@@ -89,6 +90,9 @@ const Home = () => {
 
       {/* our teams section  */}
       <OurTeam />
+      
+      {/* FAQ Section  */}
+      <Faq></Faq>
     </>
   );
 };
