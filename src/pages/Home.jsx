@@ -9,6 +9,7 @@ import OurTeam from "../components/HomeSection/OurTeam";
 import { Helmet } from "react-helmet";
 import Faq from "../components/HomeSection/Faq";
 import BestToys from "../components/HomeSection/BestToys";
+import Services from "../components/HomeSection/Services";
 
 const Home = () => {
   const [viewDetail, setViewDetail] = useState("");
@@ -21,6 +22,9 @@ const Home = () => {
       </Helmet>
       {/* Banner section  */}
       <Banner />
+
+      {/* Services section  */}
+      <Services/>
 
 
       {/* Best toys section  */}
