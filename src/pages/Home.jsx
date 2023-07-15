@@ -12,6 +12,7 @@ import BestToys from "../components/HomeSection/BestToys";
 import Services from "../components/HomeSection/Services";
 import Modal from "../components/Modal";
 import FeaturedBrands from "../components/HomeSection/FeaturedBrands";
+import ToyEvents from "../components/HomeSection/ToyEvents";
 
 const Home = () => {
   const [viewDetail, setViewDetail] = useState("");
@@ -45,6 +46,9 @@ const Home = () => {
 
       {/* Featured brands section  */}
       <FeaturedBrands/>
+
+      {/* Toy Event section */}
+      <ToyEvents/>
 
       {/* image gallery section  */}
       <ImgGallery />
