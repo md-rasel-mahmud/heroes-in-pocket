@@ -27,13 +27,13 @@ const FeaturedBrands = () => {
   return (
     <section id="featured-brands" className="bg-black/10 backdrop-blur-md py-16">
       <div className="container mx-auto">
-        <div className="text-center">
+        <div data-aos='fade-down' className="text-center">
           <h2 className="text-3xl font-bold mb-6">Featured Brands</h2>
         </div>
         <div className="divider"></div>
         <div className="mt-12 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
           {brands.map((brand) => (
-            <div key={brand.id} className="flex justify-center items-center bg-black/10 p-2 m-2 rounded-lg">
+            <div key={brand.id} data-aos="fade-up" className="flex justify-center items-center bg-black/10 p-2 m-2 rounded-lg">
               <img src={brand.logo} alt={brand.name} className="h-16" />
             </div>
           ))}
