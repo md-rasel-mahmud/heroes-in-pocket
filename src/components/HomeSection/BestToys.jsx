@@ -30,8 +30,6 @@ const BestToys = () => {
     loadData();
   }, []);
 
-  console.log(bestToys.sort((a, b) => b.rating - a.rating).slice(0, 6));
-
   return (
     <div className="p-10 bg-black/10 backdrop-blur-md my-2 rounded-lg">
       <h2
@@ -65,8 +63,8 @@ const BestToys = () => {
           .sort((a, b) => b.rating - a.rating)
           .slice(0, 6)
           .map((toy) => (
-            <SwiperSlide>
-              <div data-aos="flip-up" key={toy.id} className="card w-full p-2 bg-base-200 shadow-xl relative mb-10">
+            <SwiperSlide key={toy._id}>
+              <div data-aos="flip-up" className="card w-full p-2 bg-base-200 shadow-xl relative mb-10">
                 <figure className="h-44 md:h-72 border border-b-4 border-primary">
                   <img
                     className="object-cover object-top w-full h-full"
